@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | CarDealership</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    :root { --primary: #003366; --accent: #0055aa; }
+    body { font-family: 'Segoe UI', sans-serif; background: #f8f9fa; }
+    .navbar { background: var(--primary); }
+    .navbar-brand, .nav-link { color: #fff !important; }
+    .nav-link:hover { color: #90c0ff !important; }
+    .hero {
+      background: linear-gradient(135deg, #003366 0%, #0055aa 100%);
+      color: #fff; padding: 70px 0; text-align: center;
+    }
+    .hero h1 { font-size: 2.8rem; font-weight: 700; }
+    .contact-card {
+      background: #fff; border-radius: 12px; padding: 32px;
+      box-shadow: 0 4px 18px rgba(0,0,0,.08);
+    }
+    .info-item { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 24px; }
+    .info-item .icon {
+      width: 46px; height: 46px; border-radius: 50%;
+      background: var(--accent); display: flex; align-items: center;
+      justify-content: center; flex-shrink: 0;
+    }
+    .info-item .icon i { color: #fff; font-size: 1.1rem; }
+    .info-item h6 { margin: 0 0 2px; font-weight: 700; color: var(--primary); }
+    .info-item p  { margin: 0; color: #555; font-size: .92rem; }
+    .form-label { font-weight: 600; color: var(--primary); }
+    .btn-primary-custom {
+      background: var(--primary); color: #fff; border: none;
+      padding: 10px 32px; border-radius: 8px; font-weight: 600;
+      transition: background .2s;
+    }
+    .btn-primary-custom:hover { background: var(--accent); }
+    .map-placeholder {
+      width: 100%; height: 240px; background: #dde8f5;
+      border-radius: 12px; display: flex; align-items: center;
+      justify-content: center; color: var(--primary); font-size: 1.1rem;
+      font-weight: 600; border: 2px solid var(--accent);
+    }
+    footer { background: #001f3f; color: #aac4e8; padding: 24px 0; text-align: center; font-size: .9rem; }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-4" href="/djangoapp/"><i class="fas fa-car me-2"></i>CarDealership</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="/djangoapp/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/djangoapp/about/">About</a></li>
+        <li class="nav-item"><a class="nav-link active fw-bold" href="/djangoapp/contact/">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <h1><i class="fas fa-phone-alt me-2"></i>Contact Us</h1>
+    <p class="mt-3 col-md-6 mx-auto">We're here to help! Reach out to us for any inquiries about our dealerships, vehicles, or services.</p>
+  </div>
+</section>
+
+<!-- Contact Content -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- Left: Info -->
+      <div class="col-md-5">
+        <div class="contact-card h-100">
+          <h3 class="fw-bold mb-4" style="color:var(--primary)">Get in Touch</h3>
+
+          <div class="info-item">
+            <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h6>Headquarters</h6>
+              <p>1234 Auto Boulevard, Suite 500<br>Dallas, TX 75201, United States</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="icon"><i class="fas fa-phone-alt"></i></div>
+            <div>
+              <h6>Phone</h6>
+              <p>+1 (800) 555-2263 (Toll Free)<br>Mon – Fri: 8:00 AM – 7:00 PM CST</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h6>Email</h6>
+              <p>support@cardealership.com<br>sales@cardealership.com</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="icon"><i class="fab fa-twitter"></i></div>
+            <div>
+              <h6>Social Media</h6>
+              <p>@CarDealershipUS on Twitter, Facebook &amp; Instagram</p>
+            </div>
+          </div>
+
+          <div class="map-placeholder mt-3">
+            <span><i class="fas fa-map-marked-alt me-2"></i>Dallas, TX — HQ Location</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="col-md-7">
+        <div class="contact-card">
+          <h3 class="fw-bold mb-4" style="color:var(--primary)">Send Us a Message</h3>
+          <form>
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <label class="form-label">First Name</label>
+                <input type="text" class="form-control" placeholder="Spriha" required/>
+              </div>
+              <div class="col-sm-6">
+                <label class="form-label">Last Name</label>
+                <input type="text" class="form-control" placeholder="Singh" required/>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Email Address</label>
+                <input type="email" class="form-control" placeholder="spriha@example.com" required/>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" placeholder="+1 (555) 000-0000"/>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Subject</label>
+                <select class="form-select">
+                  <option>General Inquiry</option>
+                  <option>Dealer Complaint</option>
+                  <option>Review Issue</option>
+                  <option>Partnership</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Message</label>
+                <textarea class="form-control" rows="5" placeholder="Write your message here..."></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn-primary-custom">
+                  <i class="fas fa-paper-plane me-2"></i>Send Message
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p class="mb-1">&copy; 2026 CarDealership Inc. All rights reserved.</p>
+    <p><a href="/djangoapp/about/" class="text-info">About Us</a> &nbsp;|&nbsp; <a href="/djangoapp/" class="text-info">Home</a></p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

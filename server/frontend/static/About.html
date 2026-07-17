@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | CarDealership</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    :root {
+      --primary: #003366;
+      --accent:  #0055aa;
+    }
+    body { font-family: 'Segoe UI', sans-serif; background: #f8f9fa; }
+    .navbar { background: var(--primary); }
+    .navbar-brand, .nav-link { color: #fff !important; }
+    .nav-link:hover { color: #90c0ff !important; }
+    .hero {
+      background: linear-gradient(135deg, #003366 0%, #0055aa 100%);
+      color: #fff; padding: 80px 0; text-align: center;
+    }
+    .hero h1 { font-size: 2.8rem; font-weight: 700; }
+    .hero p  { font-size: 1.15rem; opacity: .85; }
+    .team-card {
+      background: #fff; border-radius: 12px; padding: 28px 20px;
+      text-align: center; box-shadow: 0 4px 18px rgba(0,0,0,.08);
+      transition: transform .2s;
+    }
+    .team-card:hover { transform: translateY(-6px); }
+    .team-card img {
+      width: 110px; height: 110px; border-radius: 50%;
+      object-fit: cover; border: 3px solid var(--accent); margin-bottom: 14px;
+    }
+    .team-card h5 { color: var(--primary); font-weight: 700; margin-bottom: 4px; }
+    .team-card .role { color: var(--accent); font-size: .9rem; font-weight: 600; margin-bottom: 10px; }
+    .team-card p  { font-size: .88rem; color: #555; }
+    .team-card a  { font-size: .85rem; color: var(--accent); text-decoration: none; }
+    .team-card a:hover { text-decoration: underline; }
+    .mission-section { background: var(--primary); color: #fff; padding: 60px 0; }
+    footer { background: #001f3f; color: #aac4e8; padding: 24px 0; text-align: center; font-size: .9rem; }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-4" href="/djangoapp/"><i class="fas fa-car me-2"></i>CarDealership</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="/djangoapp/">Home</a></li>
+        <li class="nav-item"><a class="nav-link active fw-bold" href="/djangoapp/about/">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="/djangoapp/contact/">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <h1><i class="fas fa-handshake me-2"></i>About CarDealership</h1>
+    <p class="mt-3 col-md-7 mx-auto">
+      We are a national car retailer committed to connecting customers with their
+      perfect vehicle. With over 200 dealerships across all 50 U.S. states,
+      we make car buying transparent, easy, and enjoyable.
+    </p>
+  </div>
+</section>
+
+<!-- Mission -->
+<section class="mission-section">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4">Our Mission</h2>
+    <div class="row justify-content-center g-4">
+      <div class="col-md-3">
+        <i class="fas fa-star fa-2x mb-3" style="color:#ffd700"></i>
+        <h5>Quality First</h5>
+        <p class="opacity-75">Every vehicle on our lots is certified and thoroughly inspected.</p>
+      </div>
+      <div class="col-md-3">
+        <i class="fas fa-shield-alt fa-2x mb-3" style="color:#ffd700"></i>
+        <h5>Trust &amp; Transparency</h5>
+        <p class="opacity-75">Honest pricing with no hidden fees. What you see is what you pay.</p>
+      </div>
+      <div class="col-md-3">
+        <i class="fas fa-users fa-2x mb-3" style="color:#ffd700"></i>
+        <h5>Customer Focus</h5>
+        <p class="opacity-75">10,000+ happy customers and counting. Your satisfaction is our goal.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Team -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5" style="color:var(--primary)">Meet Our Team</h2>
+    <div class="row g-4 justify-content-center">
+
+      <div class="col-md-3">
+        <div class="team-card">
+          <img src="https://i.pravatar.cc/150?img=47" alt="Spriha Singh"/>
+          <h5>Spriha Singh</h5>
+          <div class="role">Lead Full-Stack Developer</div>
+          <p>Architected the React/Django platform and microservices pipeline. Loves clean code and coffee.</p>
+          <a href="mailto:spriha.singh@cardealership.com"><i class="fas fa-envelope me-1"></i>spriha.singh@cardealership.com</a>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="team-card">
+          <img src="https://i.pravatar.cc/150?img=12" alt="Michael Carter"/>
+          <h5>Michael Carter</h5>
+          <div class="role">Backend Engineer</div>
+          <p>Django and Node.js specialist. Responsible for the dealer data API and MongoDB integration.</p>
+          <a href="mailto:michael.carter@cardealership.com"><i class="fas fa-envelope me-1"></i>michael.carter@cardealership.com</a>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="team-card">
+          <img src="https://i.pravatar.cc/150?img=32" alt="Priya Mehta"/>
+          <h5>Priya Mehta</h5>
+          <div class="role">Frontend Developer</div>
+          <p>Crafted the responsive React UI with Bootstrap. Expert in making beautiful, accessible interfaces.</p>
+          <a href="mailto:priya.mehta@cardealership.com"><i class="fas fa-envelope me-1"></i>priya.mehta@cardealership.com</a>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="team-card">
+          <img src="https://i.pravatar.cc/150?img=60" alt="James Wilson"/>
+          <h5>James Wilson</h5>
+          <div class="role">DevOps Engineer</div>
+          <p>Manages Docker, Kubernetes, and IBM Code Engine deployments. CI/CD pipeline architect.</p>
+          <a href="mailto:james.wilson@cardealership.com"><i class="fas fa-envelope me-1"></i>james.wilson@cardealership.com</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p class="mb-1">&copy; 2026 CarDealership Inc. All rights reserved.</p>
+    <p><a href="/djangoapp/contact/" class="text-info">Contact Us</a> &nbsp;|&nbsp; <a href="/djangoapp/" class="text-info">Home</a></p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
